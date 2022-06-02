@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Program</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="script.js" defer></script>
+</head>
+<body>
+<header>
+    <div class="container">
+        <nav class = "nav">
+            <a href="index.html" class="logo-box">
+                <img src="./images/logo.svg" alt="" class="logo">
+            </a>
+        </nav>
+    </div>
+</header>
+
+
+
+<section class="landing-page">
+
+    <div data-aos="fade-right">
+    <h1>Welcome to the 5/3/1 calculator! <span id="ani">  🏋️ </span></h1>
+    </div>
+    <div class="para">
+        <p style="line-height: 75%;" data-aos="fade-left" data-aos-duration="4000">
+            5/3/1 is a four week powerlifting program aimed to increase your maxes is the following four compound-lifts: Military Press, Deadlifts, Benchpress, and Squats.
+            <br>
+            <br> Remember that you should be completing each movement on different days of the week.
+            <br>
+            <br>
+            To start, simply input your current maxes into the boxes below.
+        </p>
+    </div>
+
+    <div class="maxes" data-aos="fade-in">
+        <label for="mp" class="label">Military Press:</label>
+        <input type="text" id="mp" placeholder="(lbs)" min="1" required="required">
+        <label for="dl" class="label">Deadlift:</label>
+        <input type="text" id="dl" placeholder="(lbs)" min="1" required="required">
+        <label for="bp" class="label">Benchpress:</label>
+        <input type="text" id="bp" placeholder="(lbs)" min="1" required="required">
+        <label for="squat" class="label">Squat:</label>
+        <input type="text" id="squat" placeholder="(lbs)" min="1" required="required">
+    </div>
+    
+    <div class="button">
+        <button id="btn" onclick="changeTable()">CALCULATE</button>
+    </div>
+
+    <div class="wk1" data-aos="fade-in">
+        <table id="wk1" class="hidden">
+            <caption>WEEK 1</caption>
+            <tr>
+                <th>MILITARY ↓</th>
+                <th>DEADLIFT ↓</th>
+                <th>BENCHPRESS ↓</th>
+                <th>SQUAT ↓</th>
+            </tr>
+            <tr>
+                <td id="t1"></td>
+                <td id="t2"></td>
+                <td id="t3"></td>
+                <td id="t4"></td>
+            </tr>
+            <tr>
+                <td id="t5"></td>
+                <td id="t6"></td>
+                <td id="t7"></td>
+                <td id="t8"></td>
+            </tr>
+            <tr>
+                <td id="t9"></td>
+                <td id="t10"></td>
+                <td id="t11"></td>
+                <td id="t12"></td>
+            </tr>
+            <tr>
+                <td id="t13"></td>
+                <td id="t14"></td>
+                <td id="t15"></td>
+                <td id="t16"></td>
+            </tr>
+            <tr>
+                <td id="t17"></td>
+                <td id="t18"></td>
+                <td id="t19"></td>
+                <td id="t20"></td>
+            </tr>
+            <tr>
+                <td id="t21"></td>
+                <td id="t22"></td>
+                <td id="t23"></td>
+                <td id="t24"></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="wk2" data-aos="fade-in">
+        <table class="hidden" id="wk2">
+            <caption>WEEK 2</caption>
+            <tr>
+                <th>MILITARY ↓</th>
+                <th>DEADLIFT ↓</th>
+                <th>BENCHPRESS ↓</th>
+                <th>SQUAT ↓</th>
+            </tr>
+            <tr>
+                <td id="t25"></td>
+                <td id="t26"></td>
+                <td id="t27"></td>
+                <td id="t28"></td>
+            </tr>
+            <tr>
+                <td id="t29"></td>
+                <td id="t30"></td>
+                <td id="t31"></td>
+                <td id="t32"></td>
+            </tr>
+            <tr>
+                <td id="t33"></td>
+                <td id="t34"></td>
+                <td id="t35"></td>
+                <td id="t36"></td>
+            </tr>
+            <tr>
+                <td id="t37"></td>
+                <td id="t38"></td>
+                <td id="t39"></td>
+                <td id="t40"></td>
+            </tr>
+            <tr>
+                <td id="t41"></td>
+                <td id="t42"></td>
+                <td id="t43"></td>
+                <td id="t44"></td>
+            </tr>
+            <tr>
+                <td id="t45"></td>
+                <td id="t46"></td>
+                <td id="t47"></td>
+                <td id="t48"></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="wk3" data-aos="fade-in">
+        <table class="hidden" id="wk3">
+            <caption>WEEK 3</caption>
+            <tr>
+                <th>MILITARY ↓</th>
+                <th>DEADLIFT ↓</th>
+                <th>BENCHPRESS ↓</th>
+                <th>SQUAT ↓</th>
+            </tr>
+            <tr>
+                <td id="t49"></td>
+                <td id="t50"></td>
+                <td id="t51"></td>
+                <td id="t52"></td>
+            </tr>
+            <tr>
+                <td id="t53"></td>
+                <td id="t54"></td>
+                <td id="t55"></td>
+                <td id="t56"></td>
+            </tr>
+            <tr>
+                <td id="t57"></td>
+                <td id="t58"></td>
+                <td id="t59"></td>
+                <td id="t60"></td>
+            </tr>
+            <tr>
+                <td id="t61"></td>
+                <td id="t62"></td>
+                <td id="t63"></td>
+                <td id="t64"></td>
+            </tr>
+            <tr>
+                <td id="t65"></td>
+                <td id="t66"></td>
+                <td id="t67"></td>
+                <td id="t68"></td>
+            </tr>
+            <tr>
+                <td id="t69"></td>
+                <td id="t70"></td>
+                <td id="t71"></td>
+                <td id="t72"></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="wk4" data-aos="fade-in"> 
+        <table class="hidden" id="wk4">
+            <caption>WEEK 4 - DELOAD</caption>
+            <tr>
+                <th>MILITARY ↓</th>
+                <th>DEADLIFT ↓</th>
+                <th>BENCHPRESS ↓</th>
+                <th>SQUAT ↓</th>
+            </tr>
+            <tr>
+                <td id="t73"></td>
+                <td id="t74"></td>
+                <td id="t75"></td>
+                <td id="t76"></td>
+            </tr>
+            <tr>
+                <td id="t77"></td>
+                <td id="t78"></td>
+                <td id="t79"></td>
+                <td id="t80"></td>
+            </tr>
+            <tr>
+                <td id="t81"></td>
+                <td id="t82"></td>
+                <td id="t83"></td>
+                <td id="t84"></td>
+            </tr>
+        </table>
+    </div>
+
+</section>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+    AOS.init();
+    </script>
+</body>
+</html>
